@@ -1,11 +1,13 @@
+/* style.css */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 html {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    background-color: mediumpurple;
+    background-color: #87CEEB; /* Light blue */
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -56,12 +58,13 @@ img.center {
     margin: 0 auto;
     text-align: center;
     position: relative;
-    /* overflow: hidden; */
 }
+
 .container div.wish {
     top: 10vh;
     z-index: 1;
 }
+
 .container > div {
     position: absolute;
     left: 0;
@@ -92,16 +95,16 @@ img.center {
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
-  }
+}
   
-  .balloon {
+.balloon {
     height: 125px;
     width: 105px;
     border-radius: 75% 75% 70% 70%;
     position: relative;
-  }
-  
-  .balloon:before {
+}
+
+.balloon:before {
     content: "";
     height: 75px;
     width: 1px;
@@ -113,41 +116,37 @@ img.center {
     left: 0;
     right: 0;
     margin: auto;
-  }
+}
   
-  .balloon:after {
-      content: "▲";
-      text-align: center;
-      display: block;
-      position: absolute;
-      color: inherit;
-      top: 120px;
-      left: 0;
-      right: 0;
-      margin: auto;
-  }
+.balloon:after {
+    content: "▲";
+    text-align: center;
+    display: block;
+    position: absolute;
+    color: inherit;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
   
-  @keyframes float {
-    from {transform: translateY(100vh);
-    opacity: 1;}
-    to {transform: translateY(-300vh);
-    opacity: 0;}
-  }
-/*
-@keyframes rotate {
+@keyframes float {
     from {
-        transform: rotate(45deg);
+        transform: translateY(100vh);
+        opacity: 1;
     }
     to {
-        transform: rotate(90deg);
+        transform: translateY(-300vh);
+        opacity: 0;
     }
-} */
+}
+
 .wish-hbd {
     height: 350px;
     position: relative;
     margin: 0;
     text-transform: uppercase;
-  }
+}
   
 h5 {
     font-weight: lighter;
@@ -155,7 +154,6 @@ h5 {
     margin: 10px 0 0;
 }
 
-/* Remove `display: none` to use Refresh button and Count-up timer */
 #seconds {
     display: none;
 }
@@ -180,7 +178,7 @@ h5 {
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
 }
 
@@ -199,11 +197,11 @@ h5 {
     }
     .wish-hbd {
         font-size: 1.8rem;
-      }
+    }
     
     h5 {
         font-size: 1.3rem;
-      }
+    }
     img {
         width: 300px;
         height: 200px;

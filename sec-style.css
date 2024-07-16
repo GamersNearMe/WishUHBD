@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .book {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 2000px; /* Perspective for 3D effect */
+  }
+  
+  .page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    backface-visibility: hidden; /* Hide back of the pages */
+  }
+  
+  .page1 {
+    transform: rotateY(0deg);
+    z-index: 2;
+  }
+  
+  .page2 {
+    transform: rotateY(0deg) translateX(-100%);
+    z-index: 1;
+  }
+  
+  .page3 {
+    transform: rotateY(180deg);
+    z-index: 2;
+  }
+  
+  .content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .inner {
+    text-align: center;
+  }
+  
+  .h, .bd {
+    font-family: 'Tangerine', cursive;
+    font-weight: bold;
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #0f3b5f;
+  }
+  
+  .birthday {
+    width: 80%;
+    max-width: 300px;
+    transform: rotate(-30deg);
+  }
+  
+  .wish {
+    font-family: 'Tangerine', cursive;
+    font-size: 24px;
+    color: rgba(15, 59, 95, 0.85);
+    line-height: 1.5;
+    padding: 20px;
+    text-align: center;
+    overflow-y: auto;
+    height: 100%;
+  }
+  
+  #open {
+    display: none;
+  }
+  
+  #open:checked + .book {
+    transform: rotateY(-180deg);
+  }
+  
+  .clouds {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow interaction with elements behind */
+  }
+  
+  .cloud {
+    position: absolute;
+    background-image: url('https://i.imgur.com/BokEdoR.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 100px;
+    opacity: 0.8;
+    pointer-events: none; /* Allow interaction with elements behind */
+  }
+  
+  
